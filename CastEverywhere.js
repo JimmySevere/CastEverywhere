@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CastEverywhere
 // @namespace    http://thebop.biz
-// @version      0.1
+// @version      0.2-dev
 // @description  Cast all video tag sources
 // @author       Bop
 // @require      https://code.jquery.com/jquery-3.1.1.min.js
