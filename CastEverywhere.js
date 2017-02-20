@@ -24,6 +24,7 @@
             '<div class="bop-video-controls">'+
             '<div class="close"><i class="fa fa-times" aria-hidden="true"></i></div>'+
             '<div class="list"><select></select></div>'+
+            '<div class="refresh"><i class="fa fa-refresh" aria-hidden="true"></i></div>'+
             '<div class="cast"><i class="fa fa-television" aria-hidden="true"></i><i class="fa fa-plus" aria-hidden="true"></i></div>'+
             '</div>'
         ),
@@ -40,7 +41,11 @@
             }
 
             this.searchIntervalID = window.setInterval(this.searchIntervalFn.bind(this), this.searchInterval);
-            this.controls.on('click', '.cast', this.cast.bind(this));
+            
+            this.controls
+              .on('click', '.cast', this.cast.bind(this))
+              .on('click', '.close', this.detachFromBody.bind(this))
+              .on('click', '.refresh', this.updateList.bind(this));
         },
         updateList: function(){
             this.list = {'Video':$('video'), 'Audio':$('audio')};
@@ -64,6 +69,10 @@
         appendToBody: function(){
             $('body').append(this.controls);
             this.appended = true;
+        },
+        detachFromBody: function(){
+          this.controls.detach();
+          this.appended = false;
         },
         searchIntervalFn: function(){
             this.updateList();
