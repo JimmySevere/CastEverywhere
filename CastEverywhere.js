@@ -11,6 +11,8 @@
 // @grant        none
 // ==/UserScript==
 
+jQuery.noConflict();
+
 (function($) {
     'use strict';
 
