@@ -8,6 +8,8 @@
 // @require      https://www.gstatic.com/cv/js/sender/v1/cast_sender.js
 // @require      https://www.gstatic.com/cast/sdk/libs/sender/1.0/cast_framework.js
 // @match        *://*/*
+// @exclude      *://www.youtube.com/*
+// @exclude      *://www.bbc.co.uk/iplayer/*
 // @grant        none
 // ==/UserScript==
 
