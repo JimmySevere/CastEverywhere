@@ -10,6 +10,7 @@
 // @match        *://*/*
 // @exclude      *://www.youtube.com/*
 // @exclude      *://www.bbc.co.uk/iplayer/*
+// @exclude      *://vidcast.dabble.me/*
 // @grant        none
 // ==/UserScript==
 
